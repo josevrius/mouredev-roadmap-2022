@@ -17,15 +17,16 @@ public class App {
 
         System.out.println(HEADER);
         try {
-            System.out.println("Superada : " + (isRaceCompleted(actions, track) ? "SI" : "NO"));
+            boolean result = startRace(actions, track);
+            System.out.println("Superada : " + (result ? "SI" : "NO"));
         } catch (Exception e) {
             System.out.println("Error ...: " + e.getMessage());
         }
     }
 
-    private static boolean isRaceCompleted(String[] actions, String track) {
+    private static boolean startRace(String[] actions, String track) {
         if (!track.matches("[_|]*")) {
-            throw new IllegalArgumentException("Invalid track");
+            throw new IllegalArgumentException("Pista no válida");
         }
         StringBuilder race = new StringBuilder();
 

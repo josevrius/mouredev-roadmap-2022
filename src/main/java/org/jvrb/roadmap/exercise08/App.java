@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class App {
 
+    private static final Scanner SCN = new Scanner(System.in);
+
     private static final String HEADER = """
             
             PALABRAS REPETIDAS
@@ -22,10 +24,10 @@ public class App {
     }
 
     private static String enterText() {
-        String text = new Scanner(System.in).nextLine();
+        String text = SCN.nextLine();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Empty input");
+            throw new IllegalArgumentException("Entrada nula");
         }
         return text;
     }

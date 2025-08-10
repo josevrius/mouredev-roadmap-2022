@@ -25,7 +25,7 @@ public class App {
     // WARNING: Una recursión profunda causa "StackOverflowError"
     private static BigInteger calculateFactorial(int number) {
         if (number < 0) {
-            throw new IllegalArgumentException("Negative number not allowed");
+            throw new IllegalArgumentException("No se permiten valores negativos");
         } else if (number <= 1) {
             return BigInteger.ONE;
         }

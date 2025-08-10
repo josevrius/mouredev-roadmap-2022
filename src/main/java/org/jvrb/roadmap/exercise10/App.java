@@ -43,7 +43,7 @@ public class App {
         String text = new Scanner(System.in).nextLine().strip();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Empty text");
+            throw new IllegalArgumentException("Entrada nula");
         }
         return text;
     }

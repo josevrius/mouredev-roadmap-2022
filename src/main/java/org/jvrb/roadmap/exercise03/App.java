@@ -20,22 +20,21 @@ public final class App {
             int length = enterLength();
             printFibonacciSequence(length);
         } catch (Exception e) {
-            if (e instanceof InputMismatchException) {
-                System.out.println("Error ...: Incorrect input");
-            } else {
-                System.out.println("Error ...: " + e.getMessage());
-            }
+            System.out.println("Error ...: " + e.getMessage());
         }
     }
 
     private static int enterLength() {
+        if (!SCN.hasNextInt()) {
+            throw new InputMismatchException("No es un número entero");
+        }
         int length = SCN.nextInt();
 
         if (length == 0) {
-            throw new IllegalArgumentException("Zero number not allowed");
+            throw new IllegalArgumentException("No se permite valor cero");
         }
         if (length < 0) {
-            throw new IllegalArgumentException("Negative number not allowed");
+            throw new IllegalArgumentException("No se permiten valores negativos");
         }
         return length;
     }

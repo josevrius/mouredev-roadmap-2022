@@ -27,11 +27,7 @@ public class App {
             double area = calculateArea(polygon, base, height);
             System.out.println("Area ....: " + new DecimalFormat("#.##").format(area));
         } catch (Exception e) {
-            if (e instanceof InputMismatchException) {
-                System.out.println("Error ...: Incorrect input");
-            } else {
-                System.out.println("Error ...: " + e.getMessage());
-            }
+            System.out.println("Error ...: " + e.getMessage());
         }
     }
 
@@ -39,20 +35,23 @@ public class App {
         String polygon = SCN.nextLine().strip().toUpperCase();
 
         if (polygon.isEmpty()) {
-            throw new IllegalArgumentException("Empty selection");
+            throw new IllegalArgumentException("Selección nula");
         }
         if (!polygon.matches("[TCR]")) {
-            throw new IllegalArgumentException("Invalid selection");
+            throw new IllegalArgumentException("Selección no válida");
         }
         return polygon;
     }
 
     private static double enterValue(String msg) {
         System.out.print(msg);
+        if (!SCN.hasNextDouble()) {
+            throw new InputMismatchException("No es un número");
+        }
         double base = SCN.nextDouble();
 
         if (base < 0) {
-            throw new IllegalArgumentException("Negative number not allowed");
+            throw new IllegalArgumentException("No se permiten valores negativos");
         }
         return base;
     }

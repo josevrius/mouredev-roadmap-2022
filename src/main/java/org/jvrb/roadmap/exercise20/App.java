@@ -1,8 +1,12 @@
 package org.jvrb.roadmap.exercise20;
 
 import java.time.Duration;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class App {
+
+    private static final Scanner SCN = new Scanner(System.in);
 
     private static final String HEADER = """
             
@@ -12,17 +16,31 @@ public class App {
     public static void main(String[] args) {
         System.out.println(HEADER);
         try {
-            System.out.println("Milisegundos : " + getMilliseconds(5, 3, 20, 10));
+            int d = enterValueFor("Días ........: ");
+            int h = enterValueFor("Horas .......: ");
+            int m = enterValueFor("Minutos .....: ");
+            int s = enterValueFor("Segundos ....: ");
+            System.out.println("Milisegundos : " + convertToMillis(d, h, m, s));
         } catch (Exception e) {
-            System.out.println("Error : " + e.getMessage());
+            System.out.println("Error .......: " + e.getMessage());
         }
     }
 
-    private static long getMilliseconds(int days, int hours, int minutes, int seconds) {
-        if (days < 0 || hours < 0 || minutes < 0 || seconds < 0) {
-            throw new IllegalArgumentException("Negative values are not allowed");
-        }
+    private static int enterValueFor(String msg) {
+        System.out.print(msg);
 
+        if (!SCN.hasNextInt()) {
+            throw new InputMismatchException("No es un número entero");
+        }
+        int value = SCN.nextInt();
+
+        if (value < 0) {
+            throw new IllegalArgumentException("No se permiten valores negativos");
+        }
+        return value;
+    }
+
+    private static long convertToMillis(int days, int hours, int minutes, int seconds) {
         return Duration
                 .ofDays(days)
                 .plusHours(hours)

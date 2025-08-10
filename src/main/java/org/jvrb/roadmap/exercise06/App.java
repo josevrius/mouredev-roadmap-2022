@@ -27,7 +27,7 @@ public class App {
             System.out.printf("AR .....: %s = %s%n", getAspectRatio(image), getSimpleAspectRatio(image));
         } catch (Exception e) {
             if (e instanceof IllegalArgumentException) {
-                System.out.println("Error ..: Invalid source");
+                System.out.println("Error ..: Imagen no encontrada");
             } else {
                 System.out.println("Error ..: " + e.getMessage());
             }

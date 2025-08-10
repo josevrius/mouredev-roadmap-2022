@@ -24,7 +24,7 @@ public class App {
         String text = new Scanner(System.in).nextLine();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Empty input");
+            throw new IllegalArgumentException("Entrada nula");
         }
         return text;
     }

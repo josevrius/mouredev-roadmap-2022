@@ -32,10 +32,10 @@ public final class App {
         String word = SCN.nextLine().strip();
 
         if (word.isEmpty()) {
-            throw new InputMismatchException("empty input");
+            throw new InputMismatchException("Entrada nula");
         }
         if (word.contains(" ")) {
-            throw new InputMismatchException("only a word allowed");
+            throw new InputMismatchException("Solo se permite una palabra");
         }
         return word;
     }

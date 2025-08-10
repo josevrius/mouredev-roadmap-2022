@@ -19,19 +19,18 @@ public class App {
             int number = enterNumber();
             System.out.println("Armstrong : " + (isArmstrong(number) ? "SI" : "NO"));
         } catch (Exception e) {
-            if (e instanceof InputMismatchException) {
-                System.out.println("Error ....: Invalid input");
-            } else {
-                System.out.println("Error ....: " + e.getMessage());
-            }
+            System.out.println("Error ....: " + e.getMessage());
         }
     }
 
     private static int enterNumber() {
+        if (!SCN.hasNextInt()) {
+            throw new InputMismatchException("Entrada incorrecta");
+        }
         int number = SCN.nextInt();
 
         if (number < 0) {
-            throw new IllegalArgumentException("Negative number not allowed");
+            throw new IllegalArgumentException("No se permiten valores negativos");
         }
         return number;
     }

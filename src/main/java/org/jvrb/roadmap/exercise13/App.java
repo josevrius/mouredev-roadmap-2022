@@ -25,7 +25,7 @@ public class App {
         String text = new Scanner(System.in).nextLine().strip();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Empty text");
+            throw new IllegalArgumentException("Entrada nula");
         }
         return text;
     }
@@ -50,7 +50,6 @@ public class App {
             return false;
         }
 
-        // Check de doble puntero
         int i = 0;
         int j = normalized.length() - 1;
         while (i < j) {
