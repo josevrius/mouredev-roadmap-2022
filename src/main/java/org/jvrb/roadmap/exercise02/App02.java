@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public final class App {
+public final class App02 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -32,7 +32,7 @@ public final class App {
         String word = SCN.nextLine().strip();
 
         if (word.isEmpty()) {
-            throw new InputMismatchException("Entrada nula");
+            throw new InputMismatchException("Campo vacío");
         }
         if (word.contains(" ")) {
             throw new InputMismatchException("Solo se permite una palabra");

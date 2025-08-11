@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public final class App {
+public final class App03 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -31,7 +31,7 @@ public final class App {
         int length = SCN.nextInt();
 
         if (length == 0) {
-            throw new IllegalArgumentException("No se permite valor cero");
+            throw new IllegalArgumentException("Cero no está permitido");
         }
         if (length < 0) {
             throw new IllegalArgumentException("No se permiten valores negativos");

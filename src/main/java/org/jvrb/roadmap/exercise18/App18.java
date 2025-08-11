@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise18;
 
 import java.util.Random;
 
-public class App {
+public class App18 {
 
     private static final Random RND = new Random();
 
@@ -37,7 +37,7 @@ public class App {
             switch (obstacle) {
                 case '_' -> race.append(action.equals("run") ? obstacle : "x");
                 case '|' -> race.append(action.equals("jump") ? obstacle : "/");
-                default -> throw new IllegalArgumentException("Invalid obstacle");
+                default -> throw new IllegalArgumentException("Obstáculo no válido");
             }
         }
         System.out.println("Pista ...: " + track);

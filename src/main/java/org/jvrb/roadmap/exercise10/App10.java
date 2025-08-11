@@ -3,8 +3,11 @@ package org.jvrb.roadmap.exercise10;
 import java.text.Normalizer;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
-public class App {
+public class App10 {
+
+    private static final Scanner SCN = new Scanner(System.in);
 
     private static final Map<Character, String> morseCode = Map.ofEntries(
             Map.entry('A', ".-"), Map.entry('B', "-..."), Map.entry('C', "-.-."),
@@ -40,10 +43,10 @@ public class App {
     }
 
     private static String enterText() {
-        String text = new Scanner(System.in).nextLine().strip();
+        String text = SCN.nextLine().strip();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Entrada nula");
+            throw new IllegalArgumentException("Campo vacío");
         }
         return text;
     }
@@ -79,8 +82,8 @@ public class App {
     }
 
     private static String decode(String morse) {
-        StringBuilder decodedMorse = new StringBuilder();
         String normalizedMorse = normalizeMorse(morse);
+        StringBuilder decodedMorse = new StringBuilder();
 
         for (String line : normalizedMorse.split("\n")) {
             for (String word : line.split(" {2,}")) {
@@ -100,15 +103,14 @@ public class App {
     }
 
     private static String normalizeText(String text) {
-        String normalized = text
-                .toUpperCase()
-                .replaceAll("\\s{2,}", " ")
-                .replace('Ñ', '\001');
+        final Pattern DIACRITICS = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        final Pattern NOT_ALLOWED_CHARS = Pattern.compile("\\s{2,}");
 
-        normalized = Normalizer
-                .normalize(normalized, Normalizer.Form.NFD)
-                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
-                .replace('\001', 'Ñ');
+        String normalized = text.toUpperCase().replace('Ñ', '\001');
+        normalized = Normalizer.normalize(normalized, Normalizer.Form.NFD);
+        normalized = DIACRITICS.matcher(normalized).replaceAll("");
+        normalized = NOT_ALLOWED_CHARS.matcher(normalized).replaceAll("");
+        normalized = normalized.replace('\001', 'Ñ');
 
         return normalized;
     }

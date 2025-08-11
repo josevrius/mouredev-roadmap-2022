@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class App05 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -35,7 +35,7 @@ public class App {
         String polygon = SCN.nextLine().strip().toUpperCase();
 
         if (polygon.isEmpty()) {
-            throw new IllegalArgumentException("Selección nula");
+            throw new IllegalArgumentException("Campo vacío");
         }
         if (!polygon.matches("[TCR]")) {
             throw new IllegalArgumentException("Selección no válida");

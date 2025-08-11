@@ -3,7 +3,9 @@ package org.jvrb.roadmap.exercise14;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class App {
+public class App14 {
+
+    private static final Scanner SCN = new Scanner(System.in);
 
     private static final String HEADER = """
             
@@ -14,7 +16,7 @@ public class App {
     public static void main(String[] args) {
         System.out.print(HEADER);
         try {
-            int number = new Scanner(System.in).nextInt();
+            int number = SCN.nextInt();
             BigInteger factorial = calculateFactorial(number);
             System.out.println("Factorial : " + factorial);
         } catch (Exception e) {

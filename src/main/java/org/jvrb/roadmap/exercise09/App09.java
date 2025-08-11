@@ -3,7 +3,7 @@ package org.jvrb.roadmap.exercise09;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class App09 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -25,7 +25,7 @@ public class App {
 
     private static int enterNumber() {
         if (!SCN.hasNextInt()) {
-            throw new InputMismatchException("Entrada incorrecta");
+            throw new InputMismatchException("No es un número entero");
         }
         int number = SCN.nextInt();
 
@@ -37,13 +37,13 @@ public class App {
 
     private static String convertDecimalToBinary(int decimal) {
         StringBuilder binary = new StringBuilder();
-        int module = decimal;
+        int quotient = decimal;
 
         do {
-            int remainder = module % 2;
+            int remainder = quotient % 2;
             binary.append(remainder);
-            module = module / 2;
-        } while (module != 0);
+            quotient = quotient / 2;
+        } while (quotient != 0);
 
         return binary.reverse().toString();
     }

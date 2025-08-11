@@ -10,7 +10,7 @@ import java.text.DecimalFormat;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class App {
+public class App06 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -56,13 +56,14 @@ public class App {
             reader = readers.next();
             reader.setInput(iis);
         } else {
-            throw new IOException("Invalid format image");
+            throw new IOException("Formato no soportado");
         }
         return reader;
     }
 
     private static String getAspectRatio(ImageReader ir) throws IOException {
-        return new DecimalFormat("#.##").format(ir.getAspectRatio(0)).replace(",", ".") + ":1";
+        return new DecimalFormat("#.##").format(ir.getAspectRatio(0))
+                .replace(",", ".") + ":1";
     }
 
     private static String getSimpleAspectRatio(ImageReader ir) throws IOException {

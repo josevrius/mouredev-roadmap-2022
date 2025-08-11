@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise17;
 
 import java.util.Scanner;
 
-public class App {
+public class App17 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -26,7 +26,7 @@ public class App {
         String text = SCN.nextLine().strip();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Empty text");
+            throw new IllegalArgumentException("Campo vacío");
         }
         return text;
     }

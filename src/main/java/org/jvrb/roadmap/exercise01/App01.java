@@ -1,6 +1,6 @@
 package org.jvrb.roadmap.exercise01;
 
-public final class App {
+public final class App01 {
 
     public static void main(String[] args) {
         System.out.println();

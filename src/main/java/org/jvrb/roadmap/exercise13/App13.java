@@ -2,8 +2,11 @@ package org.jvrb.roadmap.exercise13;
 
 import java.text.Normalizer;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
-public class App {
+public class App13 {
+
+    private static final Scanner SCN = new Scanner(System.in);
 
     private static final String HEADER = """
             
@@ -22,24 +25,23 @@ public class App {
     }
 
     private static String enterText() {
-        String text = new Scanner(System.in).nextLine().strip();
+        String text = SCN.nextLine().strip();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Entrada nula");
+            throw new IllegalArgumentException("Campo vacío");
         }
         return text;
     }
 
     private static String normalizeText(String text) {
-        String normalized = text
-                .toUpperCase()
-                .replaceAll("[^A-ZÑÁÉÍÓÚÜ\\d]+", "")
-                .replace('Ñ', '\001');
+        final Pattern DIACRITICS = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        final Pattern NOT_ALLOWED_CHARS = Pattern.compile("[^A-ZÑ\\d]+");
 
-        normalized = Normalizer
-                .normalize(normalized, Normalizer.Form.NFD)
-                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
-                .replace('\001', 'Ñ');
+        String normalized = text.toUpperCase().replace('Ñ', '\001');
+        normalized = Normalizer.normalize(normalized, Normalizer.Form.NFD);
+        normalized = DIACRITICS.matcher(normalized).replaceAll("");
+        normalized = NOT_ALLOWED_CHARS.matcher(normalized).replaceAll("");
+        normalized = normalized.replace('\001', 'Ñ');
 
         return normalized;
     }

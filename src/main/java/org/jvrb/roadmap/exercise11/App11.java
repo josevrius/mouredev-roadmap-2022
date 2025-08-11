@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class App {
+public class App11 {
+
+    private static final Scanner SCN = new Scanner(System.in);
 
     private static final String HEADER = """
             
@@ -24,10 +26,10 @@ public class App {
     }
 
     private static String enterExpression() {
-        String expression = new Scanner(System.in).nextLine().strip();
+        String expression = SCN.nextLine().strip();
 
         if (expression.isEmpty()) {
-            throw new IllegalArgumentException("Empty expression");
+            throw new IllegalArgumentException("Campo vacío");
         }
         return expression;
     }

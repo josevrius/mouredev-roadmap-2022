@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class App20 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -16,17 +16,17 @@ public class App {
     public static void main(String[] args) {
         System.out.println(HEADER);
         try {
-            int d = enterValueFor("Días ........: ");
-            int h = enterValueFor("Horas .......: ");
-            int m = enterValueFor("Minutos .....: ");
-            int s = enterValueFor("Segundos ....: ");
+            int d = enterValue("Días ........: ");
+            int h = enterValue("Horas .......: ");
+            int m = enterValue("Minutos .....: ");
+            int s = enterValue("Segundos ....: ");
             System.out.println("Milisegundos : " + convertToMillis(d, h, m, s));
         } catch (Exception e) {
             System.out.println("Error .......: " + e.getMessage());
         }
     }
 
-    private static int enterValueFor(String msg) {
+    private static int enterValue(String msg) {
         System.out.print(msg);
 
         if (!SCN.hasNextInt()) {
@@ -35,7 +35,7 @@ public class App {
         int value = SCN.nextInt();
 
         if (value < 0) {
-            throw new IllegalArgumentException("No se permiten valores negativos");
+            throw new IllegalArgumentException("No se permiten números negativos");
         }
         return value;
     }

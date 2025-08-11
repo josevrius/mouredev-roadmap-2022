@@ -2,7 +2,9 @@ package org.jvrb.roadmap.exercise12;
 
 import java.util.Scanner;
 
-public class App {
+public class App12 {
+
+    private static final Scanner SCN = new Scanner(System.in);
 
     private static final String HEADER = """
             
@@ -22,10 +24,10 @@ public class App {
 
     private static String enterText(int i) {
         System.out.printf("Texto %d .: ", i);
-        String text = new Scanner(System.in).nextLine().strip();
+        String text = SCN.nextLine().strip();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Empty text");
+            throw new IllegalArgumentException("Campo vacío");
         }
         return text;
     }

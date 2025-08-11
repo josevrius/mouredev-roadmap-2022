@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise07;
 
 import java.util.Scanner;
 
-public class App {
+public class App07 {
 
     private static final String HEADER = """
             
@@ -14,7 +14,8 @@ public class App {
         System.out.print(HEADER);
         try {
             String text = enterText();
-            reverse(text);
+            String reversedText = reverseOrder(text);
+            System.out.println("Invertido : " + reversedText);
         } catch (Exception e) {
             System.out.println("Error ....: " + e.getMessage());
         }
@@ -24,20 +25,18 @@ public class App {
         String text = new Scanner(System.in).nextLine();
 
         if (text.isEmpty()) {
-            throw new IllegalArgumentException("Entrada nula");
+            throw new IllegalArgumentException("Campo vacío");
         }
         return text;
     }
 
-    private static void reverse(String text) {
-        if (text != null && !text.isEmpty()) {
-            StringBuilder reversed = new StringBuilder();
+    private static String reverseOrder(String text) {
+        StringBuilder reversed = new StringBuilder();
 
-            for (int i = text.length() - 1; i >= 0; i--) {
-                char c = text.charAt(i);
-                reversed.append(c);
-            }
-            System.out.println("Invertido : " + reversed);
+        for (int i = text.length() - 1; i >= 0; i--) {
+            char c = text.charAt(i);
+            reversed.append(c);
         }
+        return reversed.toString();
     }
 }

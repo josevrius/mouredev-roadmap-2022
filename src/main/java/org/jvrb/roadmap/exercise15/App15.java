@@ -3,7 +3,7 @@ package org.jvrb.roadmap.exercise15;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class App15 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
@@ -25,12 +25,12 @@ public class App {
 
     private static int enterNumber() {
         if (!SCN.hasNextInt()) {
-            throw new InputMismatchException("Entrada incorrecta");
+            throw new InputMismatchException("No es un número entero");
         }
         int number = SCN.nextInt();
 
         if (number < 0) {
-            throw new IllegalArgumentException("No se permiten valores negativos");
+            throw new IllegalArgumentException("No se permiten números negativos");
         }
         return number;
     }

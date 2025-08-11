@@ -1,6 +1,6 @@
 package org.jvrb.roadmap.exercise19;
 
-public class App {
+public class App19 {
 
     private static final String HEADER = """
             
@@ -56,7 +56,7 @@ public class App {
     }
 
     private static String checkWinner(Character[][] board) {
-        Character[][] winningCombinations = new Character[][]{
+        final Character[][] WINNING_COMBS = new Character[][]{
                 {board[0][0], board[0][1], board[0][2]},
                 {board[1][0], board[1][1], board[1][2]},
                 {board[2][0], board[2][1], board[2][2]},
@@ -67,7 +67,7 @@ public class App {
                 {board[0][2], board[1][1], board[2][0]}
         };
 
-        for (Character[] row : winningCombinations) {
+        for (Character[] row : WINNING_COMBS) {
             if (row[0] == 'X' && row[1] == 'X' && row[2] == 'X') {
                 return "X";
             }
