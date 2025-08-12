@@ -29,7 +29,7 @@ public final class App22 {
 
     private static double calculate(String operations) {
         if (!operations.replace("\n", "").matches("(\\d+\\.?\\d*[+\\-*/])+\\d+\\.?\\d*")) {
-            throw new IllegalArgumentException("Operaciones no válidas");
+            throw new IllegalArgumentException("Fichero de operaciones no válido");
         }
 
         String[] entries = operations.split("\n");

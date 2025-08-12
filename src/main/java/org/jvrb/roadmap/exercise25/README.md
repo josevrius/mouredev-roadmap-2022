@@ -1,0 +1,5 @@
+## ITERATION MASTER
+
+> ### Quiero contar del 1 al 10 de uno en uno (imprimiendo cada uno).
+>> - ¿De cuántas maneras eres capaz de hacerlo?
+>> - Crea el código para cada una de ellas.
