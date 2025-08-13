@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class App27 {
+public final class App27 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

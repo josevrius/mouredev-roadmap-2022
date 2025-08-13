@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class App10 {
+public final class App10 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

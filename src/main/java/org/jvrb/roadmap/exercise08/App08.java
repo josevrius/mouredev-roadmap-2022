@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class App08 {
+public final class App08 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

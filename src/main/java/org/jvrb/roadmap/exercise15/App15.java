@@ -3,7 +3,7 @@ package org.jvrb.roadmap.exercise15;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App15 {
+public final class App15 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

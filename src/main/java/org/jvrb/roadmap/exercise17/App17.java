@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise17;
 
 import java.util.Scanner;
 
-public class App17 {
+public final class App17 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

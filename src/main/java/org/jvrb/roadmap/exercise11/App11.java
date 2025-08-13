@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class App11 {
+public final class App11 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

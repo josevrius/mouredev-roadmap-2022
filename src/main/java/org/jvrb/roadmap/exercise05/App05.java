@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App05 {
+public final class App05 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

@@ -4,14 +4,14 @@ import java.text.Normalizer;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class App13 {
+public final class App13 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
     private static final String HEADER = """
             
-            COMPROBAR PALÍDROMO
-            ===================
+            COMPROBAR PALÍNDROMO
+            ====================
             Texto .....:\s""";
 
     public static void main(String[] args) {

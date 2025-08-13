@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise28;
 
 import java.util.Arrays;
 
-public class App28 {
+public final class App28 {
 
     private static final String HEADER = """
             

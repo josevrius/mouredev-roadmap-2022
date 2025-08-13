@@ -1,6 +1,6 @@
 package org.jvrb.roadmap.exercise19;
 
-public class App19 {
+public final class App19 {
 
     private static final String HEADER = """
             

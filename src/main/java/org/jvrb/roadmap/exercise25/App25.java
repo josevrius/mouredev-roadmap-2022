@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise25;
 
 import java.util.stream.IntStream;
 
-public class App25 {
+public final class App25 {
 
     private static final String HEADER = """
             

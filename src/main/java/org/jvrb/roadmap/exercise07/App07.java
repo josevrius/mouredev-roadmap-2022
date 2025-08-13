@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise07;
 
 import java.util.Scanner;
 
-public class App07 {
+public final class App07 {
 
     private static final String HEADER = """
             

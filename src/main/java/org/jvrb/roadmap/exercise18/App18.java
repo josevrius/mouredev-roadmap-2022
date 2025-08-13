@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise18;
 
 import java.util.Random;
 
-public class App18 {
+public final class App18 {
 
     private static final Random RND = new Random();
 

@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App20 {
+public final class App20 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

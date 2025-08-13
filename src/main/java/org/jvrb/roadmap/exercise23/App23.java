@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise23;
 
 import java.util.TreeSet;
 
-public class App23 {
+public final class App23 {
 
     private static final String HEADER = """
             

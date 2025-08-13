@@ -2,7 +2,7 @@ package org.jvrb.roadmap.exercise26;
 
 import java.util.List;
 
-public class App26 {
+public final class App26 {
 
     private enum Play {
         PIEDRA, PAPEL, TIJERA;

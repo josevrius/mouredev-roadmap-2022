@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
-public class App16 {
+public final class App16 {
 
     private static final Scanner SCN = new Scanner(System.in);
 

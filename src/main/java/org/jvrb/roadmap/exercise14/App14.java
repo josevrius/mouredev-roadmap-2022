@@ -3,7 +3,7 @@ package org.jvrb.roadmap.exercise14;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class App14 {
+public final class App14 {
 
     private static final Scanner SCN = new Scanner(System.in);
 
