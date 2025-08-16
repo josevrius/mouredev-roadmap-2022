@@ -21,8 +21,8 @@ public final class App34 {
     };
 
     private static final String[] EARTHLY_BRANCHES = {
-            "Rata", "Buey", "Tigre", "Conejo", "Dragón", "Serpiente",
-            "Caballo", "Cabra", "Mono", "Gallo", "Perro", "Jabalí"
+            "de la Rata", "del Buey", "del Tigre", "del Conejo", "del Dragón", "de la Serpiente",
+            "del Caballo", "de la Cabra", "del Mono", "del Gallo", "del Perro", "del Jabalí"
     };
 
     public static void main(String[] args) {
@@ -59,6 +59,6 @@ public final class App34 {
         String earthlyBranch = EARTHLY_BRANCHES[branchIndex - 1];
         String heavenlyStem = HEAVENLY_STEMS[stemIndex - 1];
 
-        return String.format("Año %s %s de %s", earthlyBranch.endsWith("a") ? "de la" : "del", earthlyBranch, heavenlyStem);
+        return String.format("Año %s de %s", earthlyBranch, heavenlyStem);
     }
 }
