@@ -12,7 +12,7 @@ public final class App41 {
 
     public static void main(String[] args) {
         System.out.println(HEADER);
-        printPascalTriangle(32);
+        printPascalTriangle(8);
     }
 
     private static void printPascalTriangle(int size) {
@@ -20,7 +20,7 @@ public final class App41 {
         List<Integer> currentRow = new ArrayList<>();
 
         for (int row = 1; row <= size; row++) {
-            System.out.print(" ".repeat((size - row) * 5));
+            System.out.print(" ".repeat((size - row) * 2));
             currentRow.clear();
 
             for (int col = 1; col <= row; col++) {
@@ -36,9 +36,9 @@ public final class App41 {
                     System.out.printf("\u001B[32m%d\u001B[0m", number);
                 } else {
                     if (number % 2 == 0) {
-                        System.out.printf("\u001B[31m%10d\u001B[0m", number);
+                        System.out.printf("\u001B[31m%4d\u001B[0m", number);
                     } else {
-                        System.out.printf("\u001B[32m%10d\u001B[0m", number);
+                        System.out.printf("\u001B[32m%4d\u001B[0m", number);
                     }
                 }
             }
