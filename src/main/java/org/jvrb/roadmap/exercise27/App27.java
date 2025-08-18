@@ -67,21 +67,21 @@ public final class App27 {
 
     private static void drawSquare(int size) {
         System.out.println("*  ".repeat(size - 1) + '*');
-        for (int i = 1; i <= size - 2; i++) {
+        for (int row = 1; row <= size - 2; row++) {
             System.out.println("*  " + "   ".repeat(size - 2) + '*');
         }
         System.out.println("*  ".repeat(size - 1) + '*');
     }
 
     private static void drawTriangle(int size) {
-        for (int i = 1; i < size; i++) {
-            System.out.print("  ".repeat(size - i));
-            if (i == 1) {
+        for (int row = 1; row < size; row++) {
+            System.out.print("  ".repeat(size - row));
+            if (row == 1) {
                 System.out.println('*');
             } else {
                 System.out.print('*');
-                System.out.print("   ".repeat(i - 1));
-                System.out.print(" ".repeat(i - 2));
+                System.out.print("   ".repeat(row - 1));
+                System.out.print(" ".repeat(row - 2));
                 System.out.println('*');
             }
         }
