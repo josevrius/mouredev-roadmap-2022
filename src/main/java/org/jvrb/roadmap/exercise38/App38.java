@@ -1,6 +1,8 @@
 package org.jvrb.roadmap.exercise38;
 
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
 public final class App38 {
@@ -61,9 +63,10 @@ public final class App38 {
             date2 = aux;
         }
 
-        long y = date1.until(date2, ChronoUnit.YEARS);
-        long m = date1.plusYears(y).until(date2, ChronoUnit.MONTHS);
-        long d = date1.plusYears(y).plusMonths(m).until(date2, ChronoUnit.DAYS);
+        Period period = Period.between(date1, date2);
+        long y = period.getYears();
+        long m = period.minusYears(y).getMonths();
+        long d = period.minusYears(y).minusMonths(m).getDays();
 
         return new long[]{y, m, d};
     }
@@ -73,18 +76,18 @@ public final class App38 {
         long m = time[1];
         long d = time[2];
 
-        String msgY = y == 0 ? "" : y == 1 ? y + " año" : y + " años";
-        String msgM = m == 0 ? "" : m == 1 ? m + " mes" : m + " meses";
-        String msgD = d == 0 ? "" : d == 1 ? d + " día" : d + " días";
+        String yearsText = y == 0 ? "" : y == 1 ? y + " año" : y + " años";
+        String monthsText = m == 0 ? "" : m == 1 ? m + " mes" : m + " meses";
+        String daysText = d == 0 ? "" : d == 1 ? d + " día" : d + " días";
 
         if (y != 0 && m != 0 && d != 0) {
-            msgM = ", " + msgM;
+            monthsText = ", " + monthsText;
         } else if (y != 0 && d == 0) {
-            msgM = " y " + msgM;
+            monthsText = " y " + monthsText;
         }
         if (y != 0 && d != 0 || m != 0 && d != 0) {
-            msgD = " y " + msgD;
+            daysText = " y " + daysText;
         }
-        System.out.printf("Entre los lanzamientos de %s y %s\nhan transcurrido %s%s%s%n", game1, game2, msgY, msgM, msgD);
+        System.out.printf("Entre los lanzamientos de %s y %s\nhan transcurrido %s%s%s%n", game1, game2, yearsText, monthsText, daysText);
     }
 }

@@ -33,10 +33,9 @@ public final class App49 {
             System.out.println(HEADER);
             System.out.println("Fecha .: " + DateTimeFormatter.ofPattern("EEEE, d 'de' MMMM 'de' yyyy").format(date));
             System.out.println("Hora ..: " + DateTimeFormatter.ofPattern("HH:mm:ss").format(date));
-            String gift = getGift(date);
-            System.out.println(gift);
+            System.out.println("Regalo : " + getGift(date));
         } catch (Exception e) {
-            System.out.println("Error : " + e.getMessage());
+            System.out.println("Error .: " + e.getMessage());
         }
     }
 
@@ -44,15 +43,13 @@ public final class App49 {
         if (date.isBefore(FIRST_DAY)) {
             long[] remainingTime = getTimeBetween(date, FIRST_DAY);
             String msg = formatMessage(remainingTime);
-            return "Regalo : El calendario de aDEViento 2022 comenzará en " + msg;
-
+            return "El calendario de aDEViento 2022 comenzará en " + msg;
         } else if (date.isAfter(LAST_DAY)) {
             long[] elapsedTime = getTimeBetween(LAST_DAY, date);
             String msg = formatMessage(elapsedTime);
-            return "Regalo : El calendario de aDEViento 2022 finalizó hace " + msg;
-
+            return "El calendario de aDEViento 2022 finalizó hace " + msg;
         } else {
-            return "Regalo : " + GIFTS.get(date.getDayOfMonth());
+            return GIFTS.get(date.getDayOfMonth());
         }
     }
 
