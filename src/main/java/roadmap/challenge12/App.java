@@ -12,8 +12,8 @@ public final class App {
             =====================""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             String text1 = enterText(1);
             String text2 = enterText(2);
             printNoCommon(text1, text2);

@@ -15,8 +15,8 @@ public final class App {
         String[] actions = {"jump", "run"};
         String track = "_|__|_";
 
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             boolean result = startRace(actions, track);
             System.out.println("Superada : " + (result ? "SI" : "NO"));
         } catch (Exception e) {
@@ -28,12 +28,12 @@ public final class App {
         if (!track.matches("[_|]*")) {
             throw new IllegalArgumentException("Pista no válida");
         }
+
         StringBuilder race = new StringBuilder();
 
         for (int i = 0; i < track.length(); i++) {
             char obstacle = track.charAt(i);
             String action = actions[RND.nextInt(actions.length)];
-
             switch (obstacle) {
                 case '_' -> race.append(action.equals("run") ? obstacle : "x");
                 case '|' -> race.append(action.equals("jump") ? obstacle : "/");
@@ -42,6 +42,7 @@ public final class App {
         }
         System.out.println("Pista ...: " + track);
         System.out.println("Carrera .: " + race);
+
         return track.contentEquals(race);
     }
 }

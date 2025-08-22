@@ -13,8 +13,8 @@ public final class App {
             ====================""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             TreeSet<Integer> numbers = createRandomSet(5);
             System.out.println("Listado .: " + numbers);
             System.out.println("Perdidos : " + getLost(numbers));

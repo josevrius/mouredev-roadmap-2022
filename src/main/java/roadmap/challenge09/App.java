@@ -14,8 +14,8 @@ public final class App {
             Decimal :\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             int number = enterNumber();
             System.out.println("Binario : " + convertDecimalToBinary(number));
         } catch (Exception e) {

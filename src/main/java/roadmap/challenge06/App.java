@@ -21,8 +21,8 @@ public final class App {
             Imagen .:\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             ImageReader image = enterSource();
             System.out.printf("AR .....: %s = %s%n", getAspectRatio(image), getSimpleAspectRatio(image));
         } catch (Exception e) {

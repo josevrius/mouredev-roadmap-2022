@@ -14,8 +14,8 @@ public final class App {
     public static void main(String[] args) {
         int[] numbers = createRandomList();
 
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             printList(numbers);
             System.out.println("Segundo : " + getSecondMax(numbers));
         } catch (Exception e) {

@@ -2,8 +2,13 @@ package roadmap.challenge04;
 
 public final class App {
 
+    private static final String HEADER = """
+            
+            NÚMEROS PRIMOS
+            ==============""";
+
     public static void main(String[] args) {
-        System.out.println();
+        System.out.println(HEADER);
         for (int i = 1; i <= 100; i++) {
             if (isPrime(i)) {
                 System.out.println(i);

@@ -37,8 +37,8 @@ public final class App {
         int attack = 62;
         int defense = 33;
 
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             System.out.printf("Atacante ...: %s (%d)\n", attackType, attack);
             System.out.printf("Defensor ...: %s (%d)\n", defenseType, defense);
             BigDecimal damage = calculateDamage(attackType, defenseType, attack, defense);

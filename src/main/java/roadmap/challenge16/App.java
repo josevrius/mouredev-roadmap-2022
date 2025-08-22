@@ -15,8 +15,8 @@ public final class App {
             ================""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             String date = enterDate(1);
             String anotherDate = enterDate(2);
             int days = getDaysBetween(date, anotherDate);
@@ -33,8 +33,8 @@ public final class App {
         if (date.isEmpty()) {
             throw new IllegalArgumentException("Campo vacío");
         }
-        String validPattern = "(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/[0-9]{4}";
-        if (!date.matches(validPattern)) {
+        String datePattern = "(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/[0-9]{4}";
+        if (!date.matches(datePattern)) {
             throw new IllegalArgumentException("Formato de fecha no válido");
         }
         return date;

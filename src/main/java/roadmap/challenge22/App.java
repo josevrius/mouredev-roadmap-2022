@@ -13,8 +13,8 @@ public final class App {
             ===============""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             String operations = loadFile();
             double result = calculate(operations);
             System.out.println(operations.replace("\n", "") + " = " + NumberFormat.getNumberInstance().format(result));

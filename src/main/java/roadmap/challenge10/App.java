@@ -33,8 +33,8 @@ public final class App {
             Entrada :\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             String input = enterText();
             convert(convert(input));
         } catch (Exception e) {

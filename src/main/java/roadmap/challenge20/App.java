@@ -14,8 +14,8 @@ public final class App {
             ======================""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             int d = enterValue("Días ........: ");
             int h = enterValue("Horas .......: ");
             int m = enterValue("Minutos .....: ");

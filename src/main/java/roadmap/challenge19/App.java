@@ -14,8 +14,8 @@ public final class App {
                 {'O', 'x', 'O'},
         };
 
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             normalize(board);
             print(board);
             System.out.println("Ganador : " + checkWinner(board));

@@ -14,8 +14,8 @@ public final class App {
             Número ...:\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             int number = enterNumber();
             System.out.println("Armstrong : " + (isArmstrong(number) ? "SI" : "NO"));
         } catch (Exception e) {

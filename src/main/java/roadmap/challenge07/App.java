@@ -11,8 +11,8 @@ public final class App {
             Texto ....:\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             String text = enterText();
             String reversedText = reverseOrder(text);
             System.out.println("Invertido : " + reversedText);

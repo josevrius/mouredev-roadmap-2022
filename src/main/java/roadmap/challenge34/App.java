@@ -26,8 +26,8 @@ public final class App {
     };
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             int year = enterYear();
             String chineseZodiac = getChineseZodiac(year);
             System.out.println("Zodiaco : " + chineseZodiac);

@@ -16,8 +16,8 @@ public final class App {
             Expresión .:\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             String expression = enterExpression();
             System.out.printf("Balanceada : %s%n", isBalanced(expression) ? "SI" : "NO");
         } catch (Exception e) {

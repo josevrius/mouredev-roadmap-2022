@@ -13,8 +13,8 @@ public final class App {
         int[] v1 = {1, 2};
         int[] v2 = {-2, 1};
 
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             System.out.println("Vector 1 ...: " + Arrays.toString(v1));
             System.out.println("Vector 2 ...: " + Arrays.toString(v2));
             boolean orthogonal = checkOrthogonal(v1, v2);
@@ -26,7 +26,7 @@ public final class App {
 
     private static boolean checkOrthogonal(int[] v1, int[] v2) {
         if (v1 == null || v2 == null) {
-            throw new NullPointerException("Fallo al cargar los vectores");
+            throw new NullPointerException("Fallo al importar los vectores");
         }
         if (v1.length != 2 || v2.length != 2) {
             throw new IllegalArgumentException("Vectores no válidos");

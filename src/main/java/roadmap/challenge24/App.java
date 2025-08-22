@@ -17,8 +17,8 @@ public final class App {
             Opción ..:\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             String option = enterOption();
             long n1 = enterNumber("Número 1 : ");
             long n2 = enterNumber("Número 2 : ");

@@ -36,8 +36,8 @@ public final class App {
                 new Kid("Marta", 12, 143)
         };
 
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             Halloween trickOrTread = enterOption();
             goTrickOrTreat(trickOrTread, kids);
         } catch (Exception e) {

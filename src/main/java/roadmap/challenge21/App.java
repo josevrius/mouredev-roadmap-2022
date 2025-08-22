@@ -13,8 +13,8 @@ public final class App {
             =================""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             double n1 = enterNumber("Número 1 .: ");
             double n2 = enterNumber("Número 2 .: ");
             int delay = enterDelay();

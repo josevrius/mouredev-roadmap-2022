@@ -15,8 +15,8 @@ public final class App {
             Texto .....:\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             String text = enterText();
             System.out.println("Palíndromo : " + (isPalindrome(text) ? "SI" : "NO"));
         } catch (Exception e) {
@@ -48,10 +48,10 @@ public final class App {
 
     private static boolean isPalindrome(String text) {
         String normalized = normalizeText(text);
+
         if (normalized.isEmpty()) {
             return false;
         }
-
         int i = 0;
         int j = normalized.length() - 1;
         while (i < j) {

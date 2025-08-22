@@ -15,8 +15,8 @@ public final class App {
             Longitud :\s""";
 
     public static void main(String[] args) {
-        System.out.print(HEADER);
         try {
+            System.out.print(HEADER);
             int length = enterLength();
             printFibonacciSequence(length);
         } catch (Exception e) {

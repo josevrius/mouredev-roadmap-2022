@@ -44,18 +44,18 @@ public final class App {
     }
 
     private static String checkWinner(List<Play[]> plays) {
-        int p1Counter = 0;
-        int p2Counter = 0;
+        int p1Count = 0;
+        int p2Count = 0;
 
         for (Play[] player : plays) {
             if (!player[0].equals(player[1])) {
                 if (player[0].winsTo(player[1])) {
-                    p1Counter++;
+                    p1Count++;
                 } else {
-                    p2Counter++;
+                    p2Count++;
                 }
             }
         }
-        return p1Counter > p2Counter ? "JUGADOR 1" : p1Counter < p2Counter ? "JUGADOR 2" : "EMPATE";
+        return p1Count > p2Count ? "JUGADOR 1" : p1Count < p2Count ? "JUGADOR 2" : "EMPATE";
     }
 }

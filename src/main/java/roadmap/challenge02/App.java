@@ -15,9 +15,8 @@ public final class App {
             ===================""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
-
         try {
+            System.out.println(HEADER);
             String word1 = enterWord(1);
             String word2 = enterWord(2);
             boolean result = areAnagrams(word1, word2);

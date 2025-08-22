@@ -12,8 +12,8 @@ public final class App {
             =================""";
 
     public static void main(String[] args) {
-        System.out.println(HEADER);
         try {
+            System.out.println(HEADER);
             String text = enterText();
             printFramed(text);
         } catch (Exception e) {
