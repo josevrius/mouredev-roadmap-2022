@@ -8,11 +8,11 @@ public final class App {
 
     private static final String HEADER = """
             
-            CóDIGO KARAKA
+            CÓDIGO KARAKA
             =============""";
 
     public static void main(String[] args) {
-        String text = "Este es el penúltimo reto de programación del año";
+        String text = "Este es el último reto de programación del año";
 
         System.out.println(HEADER);
         System.out.println("Entrada : " + text);
@@ -33,8 +33,7 @@ public final class App {
                             .replace("i", "2")
                             .replace("o", "3")
                             .replace("u", "4")
-                    );
-                    result.append("aca").append(" ");
+                    ).append("aca").append(" ");
                 }
                 case DECODE -> {
                     if (reversedWord.startsWith("aca")) reversedWord = reversedWord.substring(3);
@@ -44,8 +43,7 @@ public final class App {
                             .replace("2", "i")
                             .replace("3", "o")
                             .replace("4", "u")
-                    );
-                    result.append(" ");
+                    ).append(" ");
                 }
             }
         }

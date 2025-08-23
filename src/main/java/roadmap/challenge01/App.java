@@ -13,19 +13,17 @@ public final class App {
     }
 
     private static void printFizzBuzz() {
-        for (int i = 1; i <= 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
+        for (int number = 1; number <= 100; number++) {
+            if (number % 3 == 0 && number % 5 == 0) {
                 System.out.println("fizzbuzz");
-            } else if (i % 3 == 0) {
+            } else if (number % 3 == 0) {
                 System.out.println("fizz");
-            } else if (i % 5 == 0) {
+            } else if (number % 5 == 0) {
                 System.out.println("buzz");
             } else {
-                System.out.println(i);
+                System.out.println(number);
             }
-            if (i < 100) {
-                System.out.println();
-            }
+            if (number < 100) System.out.println();
         }
     }
 }
